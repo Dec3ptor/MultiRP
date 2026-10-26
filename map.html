@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MultiRP – Map</title>
+  <meta name="description" content="Interactive GTA V map with places and streamers.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="config.js"></script>
+  <script src="vendor/leaflet/leaflet.js"></script>
+</head>
+<body class="app">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">M</span><span data-site-name>MultiRP</span></a>
+    <span class="server-badge" data-server-name>NoPixel</span>
+    <nav class="nav">
+      <a href="index.html">Live</a>
+      <a href="map.html">Map</a>
+      <a href="multistream.html">Multistream</a>
+    </nav>
+    <div class="header-spacer"></div>
+    <div id="live-count" class="live-count hidden"><span class="dot"></span><span class="num"></span><span class="label">live</span></div>
+  </header>
+
+  <div class="app-main">
+    <aside id="sidebar" class="map-sidebar">
+      <div class="sb-head">
+        <input id="map-search" class="input" type="search" placeholder="Search places or streamers…" aria-label="Search the map">
+        <div class="toolbar">
+          <button id="edit-btn" class="btn small" title="Put streamers on the map">✎ Place streamers</button>
+          <button id="export-btn" class="btn small hidden" title="Download streamers.json with your map positions">⤓ Export</button>
+        </div>
+        <div id="edit-hint" class="muted hidden" style="font-size:12px">
+          Click 📍 next to a streamer, then click a place or anywhere on the map. Drag pins to move them.
+          Positions are saved in this browser — use Export and replace <code>data/streamers.json</code> to share them.
+        </div>
+      </div>
+      <div class="sb-scroll">
+        <div class="sb-section">Map</div>
+        <div class="seg" id="style-seg" style="margin-bottom:8px"></div>
+        <div id="layer-toggles" class="layer-toggles"></div>
+        <div class="sb-section">Streamers <span id="sb-live-count"></span></div>
+        <div id="streamer-list" class="sb-list"></div>
+        <div class="sb-section">Places</div>
+        <div id="place-list" class="sb-list"></div>
+      </div>
+    </aside>
+
+    <div id="map" aria-label="GTA V map"></div>
+
+    <button id="sidebar-toggle" class="btn sidebar-toggle" aria-label="Show sidebar">☰</button>
+    <div class="map-floating">
+      <a id="watch-live" class="btn primary hidden" href="multistream.html">▶ Watch all live</a>
+    </div>
+    <div id="coords" class="map-coords">Right-click for coordinates</div>
+  </div>
+
+  <script type="module" src="assets/js/map.js"></script>
+</body>
+</html>

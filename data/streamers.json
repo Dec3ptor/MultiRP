@@ -1,0 +1,17 @@
+{
+  "_help": "Starter list - edit freely. Fields: twitch (or kick), name, characters, group, spot (an id from locations.json) or pos ([x, y] in GTA coordinates). Only twitch/kick is required.",
+  "streamers": [
+    { "twitch": "koil", "name": "Koil" },
+    { "twitch": "lord_kebun", "name": "Kebun", "characters": ["Mr. K"], "group": "Chang Gang" },
+    { "twitch": "ramee", "name": "Ramee", "characters": ["Ramee El-Rahman"], "group": "Chang Gang" },
+    { "twitch": "ratedepicz", "name": "RatedEpicz", "characters": ["Randy Bullet"], "group": "Chang Gang" },
+    { "twitch": "buddha", "name": "Buddha", "characters": ["Lang Buddha"] },
+    { "twitch": "anthonyz", "name": "AnthonyZ", "characters": ["Tony Corleone"] },
+    { "twitch": "sykkuno", "name": "Sykkuno", "characters": ["Yuno Sykk"] },
+    { "twitch": "xqc", "name": "xQc", "characters": ["Jean Paul"] },
+    { "twitch": "fuslie", "name": "Fuslie", "characters": ["April Fooze"] },
+    { "twitch": "summit1g", "name": "summit1g" },
+    { "twitch": "penta", "name": "PENTA" },
+    { "twitch": "kyliebitkin", "name": "KylieBitkin" }
+  ]
+}

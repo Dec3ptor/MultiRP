@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MultiRP – Live</title>
+  <meta name="description" content="Who's live on the server right now, with a multi-stream viewer and a live GTA V map.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="config.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">M</span><span data-site-name>MultiRP</span></a>
+    <span class="server-badge" data-server-name>NoPixel</span>
+    <nav class="nav">
+      <a href="index.html">Live</a>
+      <a href="map.html">Map</a>
+      <a href="multistream.html">Multistream</a>
+    </nav>
+    <div class="header-spacer"></div>
+    <div id="live-count" class="live-count hidden"><span class="dot"></span><span class="num"></span><span class="label">live</span></div>
+  </header>
+
+  <main class="page">
+    <div class="page-head">
+      <div>
+        <h1>Live on <span data-server-name>NoPixel</span></h1>
+        <p>Pick streams to watch together, or open the map.</p>
+      </div>
+      <div class="toolbar">
+        <input id="search" class="input" type="search" placeholder="Search streamer, character, group…" aria-label="Search">
+        <select id="group" class="select" aria-label="Group"><option value="">All groups</option></select>
+        <label class="check" title="Only count a stream as live if its title matches the server filter in config.js"><input id="np-only" type="checkbox" checked> Server titles only</label>
+        <button id="refresh" class="btn" title="Refresh">↻ Refresh</button>
+        <button id="twitch-btn" class="btn hidden"></button>
+      </div>
+    </div>
+
+    <div id="status" class="notice hidden"></div>
+
+    <h2 class="section-title">Live now <span id="live-total" class="count"></span></h2>
+    <div id="live-grid" class="grid"></div>
+
+    <section id="discovered-wrap" class="hidden">
+      <h2 class="section-title">Also live on the server <span id="discovered-total" class="count"></span></h2>
+      <div id="discovered-grid" class="grid"></div>
+    </section>
+
+    <h2 class="section-title">Offline <span id="offline-total" class="count"></span></h2>
+    <div id="offline-list" class="offline-list"></div>
+
+    <details style="margin-top:28px">
+      <summary class="muted" style="cursor:pointer">Add a streamer to your list</summary>
+      <form id="add-form" class="toolbar" style="margin-top:10px">
+        <input name="channel" class="input" placeholder="twitch name or kick.com/name" required>
+        <input name="name" class="input" placeholder="Display name (optional)">
+        <input name="character" class="input" placeholder="Character (optional)">
+        <input name="group" class="input" placeholder="Group (optional)">
+        <button class="btn primary">Add</button>
+      </form>
+      <p class="muted" style="font-size:13px">Saved in this browser only. To share it with everyone, add it to <code>data/streamers.json</code> in the repo.</p>
+    </details>
+  </main>
+
+  <div id="selection-bar" class="selection-bar hidden">
+    <span><b id="sel-count">0</b> selected</span>
+    <button id="sel-clear" class="btn small ghost">Clear</button>
+    <a id="sel-watch" class="btn primary" href="multistream.html">Watch together ▶</a>
+  </div>
+
+  <script type="module" src="assets/js/live.js"></script>
+</body>
+</html>

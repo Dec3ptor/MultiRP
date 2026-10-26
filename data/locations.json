@@ -1,0 +1,69 @@
+{
+  "_help": "Map markers. pos is [x, y] in GTA V world coordinates (right-click the map to read them). category must match a key in categories. A category's optional minZoom hides it until you zoom in.",
+  "categories": {
+    "police": { "label": "Police", "icon": "🚓", "color": "#2563eb" },
+    "medical": { "label": "Medical", "icon": "✚", "color": "#dc2626" },
+    "government": { "label": "Government", "icon": "🏛", "color": "#64748b" },
+    "bank": { "label": "Banks", "icon": "$", "color": "#16a34a", "minZoom": 3 },
+    "business": { "label": "Businesses", "icon": "🍔", "color": "#d97706", "minZoom": 3 },
+    "turf": { "label": "Turf", "icon": "★", "color": "#9333ea" },
+    "landmark": { "label": "Landmarks", "icon": "📍", "color": "#0891b2" }
+  },
+  "locations": [
+    { "id": "mrpd", "name": "Mission Row Police Dept", "category": "police", "pos": [440, -982] },
+    { "id": "vespucci-pd", "name": "Vespucci Police Station", "category": "police", "pos": [-1093, -809] },
+    { "id": "vinewood-pd", "name": "Vinewood Police Station", "category": "police", "pos": [638, 2] },
+    { "id": "davis-sheriff", "name": "Davis Sheriff Station", "category": "police", "pos": [360, -1584] },
+    { "id": "sandy-sheriff", "name": "Sandy Shores Sheriff", "category": "police", "pos": [1853, 3686] },
+    { "id": "paleto-sheriff", "name": "Paleto Bay Sheriff", "category": "police", "pos": [-448, 6012] },
+
+    { "id": "pillbox", "name": "Pillbox Hill Medical Center", "category": "medical", "pos": [298, -584] },
+    { "id": "mount-zonah", "name": "Mount Zonah Medical Center", "category": "medical", "pos": [-449, -340] },
+    { "id": "central-medical", "name": "Central LS Medical Center", "category": "medical", "pos": [340, -1396] },
+    { "id": "sandy-medical", "name": "Sandy Shores Medical Center", "category": "medical", "pos": [1839, 3672] },
+    { "id": "paleto-medical", "name": "Paleto Bay Medical Center", "category": "medical", "pos": [-247, 6331] },
+
+    { "id": "city-hall", "name": "Los Santos City Hall", "category": "government", "pos": [-545, -204] },
+    { "id": "bolingbroke", "name": "Bolingbroke Penitentiary", "category": "government", "pos": [1845, 2585] },
+
+    { "id": "pacific-standard", "name": "Pacific Standard Bank", "category": "bank", "pos": [235, 216] },
+    { "id": "fleeca-legion", "name": "Fleeca Bank (Legion Square)", "category": "bank", "pos": [149, -1040] },
+    { "id": "paleto-bank", "name": "Blaine County Savings Bank", "category": "bank", "pos": [-109, 6464] },
+
+    { "id": "burger-shot", "name": "Burger Shot", "category": "business", "pos": [-1183, -884] },
+    { "id": "vanilla-unicorn", "name": "Vanilla Unicorn", "category": "business", "pos": [128, -1298] },
+    { "id": "bennys", "name": "Benny's Original Motorworks", "category": "business", "pos": [-205, -1307] },
+    { "id": "ls-customs", "name": "Los Santos Customs", "category": "business", "pos": [-362, -132] },
+    { "id": "pdm", "name": "Premium Deluxe Motorsport", "category": "business", "pos": [-56, -1097] },
+    { "id": "bahama-mamas", "name": "Bahama Mamas West", "category": "business", "pos": [-1388, -586] },
+    { "id": "tequilala", "name": "Tequi-la-la", "category": "business", "pos": [-565, 276] },
+    { "id": "yellow-jack", "name": "Yellow Jack Inn", "category": "business", "pos": [1986, 3053] },
+    { "id": "casino", "name": "Diamond Casino & Resort", "category": "business", "pos": [925, 46] },
+    { "id": "weazel", "name": "Weazel News", "category": "business", "pos": [-598, -929] },
+
+    { "id": "grove-street", "name": "Grove Street", "category": "turf", "pos": [105, -1940] },
+    { "id": "lost-mc", "name": "The Lost MC Clubhouse", "category": "turf", "pos": [982, -103] },
+    { "id": "stab-city", "name": "Stab City", "category": "turf", "pos": [60, 3700] },
+
+    { "id": "legion-square", "name": "Legion Square", "category": "landmark", "pos": [195, -933] },
+    { "id": "maze-bank-tower", "name": "Maze Bank Tower", "category": "landmark", "pos": [-75, -818] },
+    { "id": "vinewood-sign", "name": "Vinewood Sign", "category": "landmark", "pos": [711, 1198] },
+    { "id": "observatory", "name": "Galileo Observatory", "category": "landmark", "pos": [-425, 1123] },
+    { "id": "del-perro-pier", "name": "Del Perro Pier", "category": "landmark", "pos": [-1663, -1126] },
+    { "id": "vespucci-beach", "name": "Vespucci Beach", "category": "landmark", "pos": [-1350, -1500] },
+    { "id": "lsia", "name": "Los Santos International Airport", "category": "landmark", "pos": [-1336, -3044] },
+    { "id": "port", "name": "Port of Los Santos", "category": "landmark", "pos": [900, -3000] },
+    { "id": "maze-bank-arena", "name": "Maze Bank Arena", "category": "landmark", "pos": [-254, -2026] },
+    { "id": "mirror-park", "name": "Mirror Park", "category": "landmark", "pos": [1100, -640] },
+    { "id": "land-act-dam", "name": "Land Act Dam", "category": "landmark", "pos": [1660, 0] },
+    { "id": "kortz", "name": "Kortz Center", "category": "landmark", "pos": [-2243, 264] },
+    { "id": "chumash", "name": "Chumash", "category": "landmark", "pos": [-3150, 1100] },
+    { "id": "fort-zancudo", "name": "Fort Zancudo", "category": "landmark", "pos": [-2047, 3132] },
+    { "id": "sandy-airfield", "name": "Sandy Shores Airfield", "category": "landmark", "pos": [1720, 3260] },
+    { "id": "alamo-sea", "name": "Alamo Sea", "category": "landmark", "pos": [1200, 4100] },
+    { "id": "grapeseed", "name": "Grapeseed", "category": "landmark", "pos": [1700, 4800] },
+    { "id": "humane-labs", "name": "Humane Labs", "category": "landmark", "pos": [3619, 3749] },
+    { "id": "mount-chiliad", "name": "Mount Chiliad", "category": "landmark", "pos": [501, 5604] },
+    { "id": "lighthouse", "name": "El Gordo Lighthouse", "category": "landmark", "pos": [3430, 5174] }
+  ]
+}

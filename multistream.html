@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>MultiRP – Multistream</title>
+  <meta name="description" content="Watch several roleplay streams side by side with chat.">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script src="config.js"></script>
+</head>
+<body class="app">
+  <header class="site-header">
+    <a class="brand" href="index.html"><span class="brand-mark">M</span><span data-site-name>MultiRP</span></a>
+    <span class="server-badge" data-server-name>NoPixel</span>
+    <nav class="nav">
+      <a href="index.html">Live</a>
+      <a href="map.html">Map</a>
+      <a href="multistream.html">Multistream</a>
+    </nav>
+    <div class="header-spacer"></div>
+    <div id="live-count" class="live-count hidden"><span class="dot"></span><span class="num"></span><span class="label">live</span></div>
+  </header>
+
+  <div class="ms-bar">
+    <form id="add-form">
+      <input id="add-input" class="input" placeholder="Add channel: name or URL" aria-label="Add channel" autocomplete="off">
+      <button class="btn primary">Add</button>
+    </form>
+    <button id="browse-btn" class="btn">☰ Live list</button>
+    <div class="seg" id="layout-seg" role="group" aria-label="Layout">
+      <button data-layout="grid" title="Grid (G)">▦ Grid</button>
+      <button data-layout="focus" title="One big + the rest small (G)">◧ Focus</button>
+    </div>
+    <div class="header-spacer"></div>
+    <button id="chat-btn" class="btn" title="Chat (C)">💬 Chat</button>
+    <button id="share-btn" class="btn" title="Copy a link to this exact setup">🔗 Share</button>
+    <button id="fs-btn" class="btn icon" title="Fullscreen (F)">⛶</button>
+    <button id="clear-btn" class="btn icon" title="Remove all streams">🗑</button>
+  </div>
+
+  <div class="app-main ms-body">
+    <div id="stage" class="stage">
+      <div id="stage-empty" class="stage-empty hidden">
+        <div class="inner">
+          <h2>Build your multistream</h2>
+          <p class="muted">Add channels above, pick from the live list, or click someone below.</p>
+          <div id="suggest" class="suggest-grid"></div>
+          <p class="muted" style="margin-top:22px;font-size:13px">
+            Shortcuts: <span class="kbd">1</span>–<span class="kbd">9</span> sound on stream N ·
+            <span class="kbd">Shift</span>+<span class="kbd">1</span>–<span class="kbd">9</span> make it the big one ·
+            <span class="kbd">G</span> layout · <span class="kbd">C</span> chat · <span class="kbd">F</span> fullscreen
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <aside id="chat-panel" class="chat-panel hidden">
+      <div class="chat-resize" title="Drag to resize"></div>
+      <div id="chat-tabs" class="chat-tabs" role="tablist"></div>
+      <div id="chat-frames" class="chat-frames"></div>
+    </aside>
+
+    <aside id="drawer" class="drawer hidden">
+      <div class="drawer-head">
+        <h3>Live on <span data-server-name>NoPixel</span></h3>
+        <button id="drawer-close" class="btn icon ghost" title="Close">✕</button>
+      </div>
+      <div style="padding:10px 12px 0"><input id="drawer-search" class="input" style="width:100%" type="search" placeholder="Filter…"></div>
+      <div id="drawer-body" class="drawer-body"></div>
+    </aside>
+  </div>
+
+  <script type="module" src="assets/js/multistream.js"></script>
+</body>
+</html>
