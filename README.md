@@ -16,8 +16,8 @@ A static website for following a GTA V roleplay server (set up for NoPixel), bui
 
 ## Publish it on GitHub Pages
 
-1. Merge this branch into `main`.
-2. In the repo on GitHub open **Settings → Pages**, choose **Deploy from a branch**, pick `main` and `/ (root)`, then **Save**.
+1. Put the site on the branch you want to publish from, usually `main` (merge this branch into it, or rename this branch to `main` under **Branches** on GitHub).
+2. In the repo on GitHub open **Settings → Pages**, choose **Deploy from a branch**, pick that branch and `/ (root)`, then **Save**.
 3. After a minute the site is at `https://dec3ptor.github.io/MultiRP/`.
 
 Twitch only plays embeds on HTTPS sites, and GitHub Pages is HTTPS, so nothing else is needed.
